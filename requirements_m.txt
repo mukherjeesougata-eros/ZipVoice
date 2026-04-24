@@ -1,0 +1,36 @@
+# Use the PyTorch CUDA wheel index (CUDA 12.8) 
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# k2 and phonemizer wheels
+--find-links https://k2-fsa.github.io/icefall/piper_phonemize.html
+-f https://k2-fsa.github.io/k2/cuda.html
+
+# Core PyTorch stack (torch 2.7.1 + CUDA 12.8)
+torch==2.7.1+cu128
+torchaudio==2.7.1+cu128
+torchvision==0.22.1+cu128
+
+# k2 build for torch 2.7.1 + CUDA 12.8 + Python 3.13
+k2==1.24.4.dev20250715+cuda12.8.torch2.7.1
+
+# Other dependencies
+numpy
+lhotse
+huggingface_hub
+safetensors
+tensorboard
+vocos
+pydub
+
+# Normalization
+cn2an
+inflect
+
+# Tokenization
+jieba
+piper_phonemize
+pypinyin
+
+# Compatibility fixer
+setuptools<81
+#pip install audioop-lts
